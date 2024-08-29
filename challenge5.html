@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Cooking - My Hobby</title>
+    <style>
+        body {
+            background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .grid {
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+
+        .grid img {
+            width: 100%;
+            max-height: 200px;
+            border-radius: 8px;
+            /* object-fit: cover; */
+            transition: all 150ms ease-in-out;
+
+
+        }
+
+        .grid img:hover {
+            transform: scale(1.2);
+        }
+
+        .container {
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid plum;
+            background-color: #fff;
+            font-size: 20px;
+            border-radius: 6px;
+            padding: 10px 15px;
+            transition: all 150ms ease-in-out;
+        }
+
+        button:hover {
+            background-color: plum;
+            cursor: pointer;
+        }
+
+        .theme-button {
+            font-size: 10px;
+            background-color: black;
+            color: #fff;
+            padding: 5px 8px;
+        }
+
+        .theme-button:hover {
+            color: #000;
+            background-color: #fff;
+        }
+
+        .cooking-intro-picture {
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .cooking-intro-picture:hover {
+            filter: contrast(80%);
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .dark {
+            background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+            color: #fff;
+        }
+
+        .dark .container {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .dark .a {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+        <h1>
+            Cooking 🍜
+        </h1>
+        <h2>
+            My favorite hobby!😋
+        </h2>
+
+        <a href="https://en.wikipedia.org/wiki/Cooking" target="_blank">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/777/original/katie-smith-uQs1802D0CQ-unsplash.jpg?1723928476"
+                alt="Food" class="cooking-intro-picture">
+        </a>
+        <div class="grid">
+
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/940/original/wikisleep-app-qvIrI4ueqzY-unsplash.jpg?1724018434"
+                alt="">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/938/original/charlesdeluvio-D-vDQMTfAAU-unsplash.jpg?1724017866"
+                alt="">
+
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/779/original/maarten-van-den-heuvel-EzH46XCDQRY-unsplash.jpg?1723928601"
+                alt="">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/942/original/eaters-collective-ddZYOtZUnBk-unsplash.jpg?1724018578"
+                alt="">
+
+
+        </div>
+        <p>
+            Cooking, also known as cookery or professionally as the culinary arts, is the art, science and craft of
+            using
+            heat to make food more palatable, digestible, nutritious, or safe. Cooking techniques and ingredients
+            vary
+            widely, from grilling food over an open fire, to using electric stoves, to baking in various types of
+            ovens,
+            reflecting local conditions. Cooking is an aspect of all human societies and a cultural universal.
+        </p>
+        📰<a href="https://en.wikipedia.org/wiki/Cooking"><strong> Read on Wikipedia </strong></a>
+        <button>Learn Cooking</button>
+
+    </div>
+    <footer>
+        Coded with 💜 by Neda Fahim
+    </footer>
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body")
+            body.classList.toggle("dark")
+        }
+
+        let themeButton = document.querySelector(".theme-button")
+        themeButton.addEventListener("click", changeTheme)
+    </script>
+</body>
+
+</html>

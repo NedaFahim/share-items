@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+
+        .main {
+            background: linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212) 55.4%, rgb(255, 233, 171) 100.2%);
+            margin: 20px auto;
+            padding: 20px;
+            display: block;
+            max-width: 50%;
+            border-radius: 15px;
+        }
+
+        .color {
+            color: #745c06;
+            font-size: 28px;
+        }
+
+        .india {
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 35px;
+            text-align: center;
+            color: #000;
+            border-radius: 5px;
+            border: 1px solid #fff;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        img {
+            margin: 10px auto;
+            display: block;
+            border-radius: 5px;
+        }
+
+        hr {
+            color: #fff;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.5;
+            padding: 5px;
+            margin: 5px;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            padding: 5px;
+            color: #000;
+
+        }
+
+        button {
+            margin: 10px auto;
+            padding: 30px;
+            font-size: 22px;
+            display: block;
+            border-radius: 15px;
+            border: 1px solid #1f5cf5;
+            background-color: #000;
+            transition: all 200ms ease-in-out;
+            color: #fff;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<div class="main">
+    <h1>
+        I love Chai!
+    </h1>
+    <hr>
+    <h2>
+        <span class="color"> Masala Chai </span>, specifically!
+    </h2>
+    <hr>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/138/944/original/How-to-make-masala-chai-2048x1356.jpeg?1723552602"
+        alt="Masala Chai" width="300px">
+    <hr />
+    <p>
+        <strong> Masala chai</strong>(/məˈsɑːlə tʃaɪ/; lit. 'mixed-spice tea') is a popular beverage
+        throughout South Asia,
+        originating in <em class="india">India</em>. It is made by brewing black tea (usually crush, tear, curl) in milk
+        and water,
+        and
+        then by sweetening with sugar. Adding aromatic herbs and spices creates masala chai, although chai is often
+        prepared unspiced.
+    </p>
+
+    <a href="https://en.wikipedia.org/wiki/Masala_chai">
+        read more about masala chai
+    </a>
+
+    <button>
+        Order Masala Chai
+    </button>
+</div>
+
+
+<script>
+    function orderTea() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your E-mail address?");
+        let favoriteTea = prompt("What is your favorite type of tea?");
+
+        if ((name.length > 0) && (email.length > 0)) {
+            alert(`Thanks ${name}. We will send you the price list. Meanwhile, drink a lot of ${favoriteTea}! ☕`);
+
+        } else {
+            alert("please enter the right information");
+        }
+    }
+    let button = document.querySelector("button")
+    button.addEventListener("click", orderTea)
+</script>
+
+<body>
+
+</body>
+
+</html>

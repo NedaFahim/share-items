@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding</title>
+  <style>
+    body {
+      background: linear-gradient(122.3deg, rgb(111, 71, 133) 14.6%, rgb(232, 129, 166) 29.6%, rgb(237, 237, 183) 42.1%, rgb(244, 166, 215) 56.7%, rgb(154, 219, 232) 68.7%, rgb(238, 226, 159) 84.8%);
+      ;
+    }
+
+
+
+    h1 {
+      text-align: center;
+      font-size: 38px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+    }
+
+    img {
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+      border-radius: 10px;
+      transition: all 150ms ease-in-out;
+    }
+
+    img:hover {
+      transform: scale(1.2);
+      transition: all 200ms ease-in-out;
+    }
+
+    a {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #5f4a67;
+    }
+
+    .enroll {
+      display: block;
+      margin: 0 auto;
+      font-size: 20px;
+      padding: 15px 15px;
+      border-radius: 20px;
+      color: #fff;
+      background-color: #d88ef5;
+      transition: all 300ms ease-in-out;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background-color: #c555f2;
+      transform: scale(1.1);
+    }
+
+    p {
+      line-height: 1.5;
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 18px;
+      margin: 15px;
+    }
+
+    .dark {
+      background: radial-gradient(590px at 8.2% 13.8%, rgb(18, 35, 60) 0%, rgb(187, 187, 187) 90%);
+    }
+
+    .dark .container {
+      background-color: #4c4b4b;
+      color: #fff;
+    }
+
+    .dark a {
+      color: #fff;
+    }
+
+    .dark a:hover {
+      color: #d88ef5;
+    }
+
+    .dark footer {
+      color: #fff;
+    }
+
+    .change-theme {
+      background-color: #000;
+      color: #fff;
+      transition: all 250ms ease-in-out;
+      font-size: 10px;
+      padding: 5px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 10px;
+
+    }
+
+    .change-theme:hover {
+      background-color: #4c4b4b;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #f5eded;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      grid-gap: 10px;
+      margin: 10px auto;
+
+    }
+
+    .grid img {
+      width: 100%;
+      max-height: 199px;
+      border-radius: 10px;
+    }
+
+    .grid img:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+
+<body>
+  <button class="change-theme">Change theme</button>
+  <div class="container">
+    <h1>Coding💻</h1>
+    <h2>
+      is my pation!
+    </h2>
+    <a href="https://en.wikipedia.org/wiki/Computer_programming">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/140/136/original/chris-ried-ieic5Tq8YMk-unsplash.jpg?1724101096"
+        alt="coding">
+    </a>
+    <div class="grid">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/140/137/original/lala-azizli-8IJ5xNTv1QM-unsplash.jpg?1724101138"
+        alt="coding">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/140/140/original/obie-fernandez-ycmP_C9Kmog-unsplash.jpg?1724101698"
+        alt="coding">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/140/139/original/rivage-Im_cQ6hQo10-unsplash.jpg?1724101352"
+        alt="coding">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/140/138/original/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg?1724101278"
+        alt="coding">
+    </div>
+    <p>
+      Computer programming or coding is the composition of sequences of instructions, called programs, that
+      computers
+      can follow to perform tasks.[1][2] It involves designing and implementing algorithms, step-by-step
+      specifications of procedures, by writing code in one or more programming languages. Programmers typically
+      use
+      high-level programming languages that are more easily intelligible to humans than machine code, which is
+      directly executed by the central processing unit.
+    </p>
+    <a href="https://en.wikipedia.org/wiki/Computer_programming"><strong>Read more on wikipedia</strong></a>
+    <button class="enroll">enroll in coding classes</button>
+  </div>
+  <footer>
+    Coded by <strong>Neda Fahim </strong>
+  </footer>
+
+  <script>
+    function changeBackground() {
+      let body = document.querySelector("body");
+      body.classList.toggle("dark");
+    }
+
+    let changeTheme = document.querySelector(".change-theme");
+    changeTheme.addEventListener("click", changeBackground)
+
+
+    function clickToEnroll() {
+      let name = prompt("What is your name?")
+      let email = prompt("Enter your e-mail address")
+      let notice = alert(`thanks for enrolling ${name}. we will be in touch!🙂`)
+    }
+    let enroll = document.querySelector(".enroll");
+    enroll.addEventListener("click", clickToEnroll)
+  </script>
+</body>
+
+</html>
